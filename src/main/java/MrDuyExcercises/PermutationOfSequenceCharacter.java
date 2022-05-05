@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PermutationOfSequenceCharacter {
     public static int n;
-
+    public static JazzySpellChecker jazzySpellChecker = new JazzySpellChecker();
     public static String swap(String str, int i, int j) {
         StringBuilder sb = new StringBuilder(str);
         sb.setCharAt(i, str.charAt(j));
@@ -14,7 +14,13 @@ public class PermutationOfSequenceCharacter {
 
     public static void try_back(String str, int i) {
         if (i == n - 1) {
-            System.out.println(str);
+            try {
+                if (jazzySpellChecker.checkSpelling(str.toLowerCase()) == -1) {
+                    System.out.println(str);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             return ;
         } else {
             for (int j = i; j < n; j++) {
@@ -32,5 +38,7 @@ public class PermutationOfSequenceCharacter {
         n = str.length();
         try_back(str , 0);
     }
+
+
 
 }
