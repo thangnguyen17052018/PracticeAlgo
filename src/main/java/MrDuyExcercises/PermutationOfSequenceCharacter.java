@@ -3,7 +3,6 @@ package MrDuyExcercises;
 import java.util.Scanner;
 
 public class PermutationOfSequenceCharacter {
-    public static int n;
     public static JazzySpellChecker jazzySpellChecker = new JazzySpellChecker();
     public static String swap(String str, int i, int j) {
         StringBuilder sb = new StringBuilder(str);
@@ -13,7 +12,7 @@ public class PermutationOfSequenceCharacter {
     }
 
     public static void try_back(String str, int i) {
-        if (i == n - 1) {
+        if (i == str.length() - 1) {
             try {
                 if (jazzySpellChecker.checkSpelling(str.toLowerCase()) == -1) {
                     System.out.println(str);
@@ -23,7 +22,7 @@ public class PermutationOfSequenceCharacter {
             }
             return ;
         } else {
-            for (int j = i; j < n; j++) {
+            for (int j = i; j < str.length(); j++) {
                 str = swap(str, i, j);
                 try_back(str, i + 1);
                 str = swap(str, i ,j);
@@ -35,7 +34,6 @@ public class PermutationOfSequenceCharacter {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input string: ");
         String str = scanner.nextLine();
-        n = str.length();
         try_back(str , 0);
     }
 
