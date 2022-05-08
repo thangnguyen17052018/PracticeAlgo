@@ -1,4 +1,4 @@
-package hackerank.stringTopic;
+package hackerrank.stringTopic;
 
 import java.util.List;
 import java.util.stream.Collectors;

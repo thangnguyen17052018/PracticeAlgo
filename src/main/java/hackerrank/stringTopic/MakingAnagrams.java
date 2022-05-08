@@ -1,4 +1,4 @@
-package hackerank.stringTopic;
+package hackerrank.stringTopic;
 
 import java.util.HashMap;
 import java.util.Map;

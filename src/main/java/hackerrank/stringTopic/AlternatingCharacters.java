@@ -1,4 +1,4 @@
-package hackerank.stringTopic;
+package hackerrank.stringTopic;
 
 public class AlternatingCharacters {
 
