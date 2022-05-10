@@ -1,4 +1,4 @@
-package hackerrank.searchtopic;
+package hackerrank.sortTopic;
 
 import java.util.List;
 
